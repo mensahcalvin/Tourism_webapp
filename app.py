@@ -6,17 +6,17 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route('/about')
-def about():
-    return render_template('about.html')
-
 @app.route('/blog')
 def blog():
     return render_template('blog.html')
 
-@app.route('/contact')
-def contact():
-    return render_template('contact.html')
+@app.route('/vacation')
+def vacation():
+    return render_template('vacation.html')
+
+@app.route('/flight')
+def flight():
+    return render_template('flight.html')
 
 @app.route('/blog/category2')
 def category1():
