@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>home-page</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/animate.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/icomoon.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/superfish.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/Popup.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-datepicker.min.css') }}">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/cs-select.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/cs-skin-border.css')}}">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -14,170 +26,171 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">My Website</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/blog">blog</a>
-                    </li>
-                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            vacation
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/blog">Blog Home</a></li>
-                            <li><a class="dropdown-item" href="/blog/category1">Category 1</a></li>
-                            <li><a class="dropdown-item" href="/blog/category2">Category 2</a></li>
-                            <li><a class="dropdown-item" href="/blog/category23">Category 2</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/flight">flight</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/hotel">hotel</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/contact">contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Tourism">Tourism</a>
-                    </li>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">My Website</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/blog">blog</a>
+            </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  vacation
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/blog">Blog Home</a></li>
+                  <li><a class="dropdown-item" href="/blog/category1">Category 1</a></li>
+                  <li><a class="dropdown-item" href="/blog/category2">Category 2</a></li>
+                  <li><a class="dropdown-item" href="/blog/category3">Category 3</a></li>
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                  </form>
-            </div>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/flight">flight</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/hotel">hotel</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Tourism">Tourism</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
         </div>
+      </div>
     </nav>
-    
+
     <div class="hero">
-        <div class="container">
-            <h1>Discover the Beauty of Ghana</h1>
-            <p>Experience vibrant culture, stunning landscapes, and warm hospitality.</p>
-            <a href="/blog" class="btn btn-primary">Explore Our Tours</a>
-        </div>
+      <div class="container">
+        <h1>Discover the Beauty of Ghana</h1>
+        <p>Experience vibrant culture, stunning landscapes, and warm hospitality.</p>
+        <a href="/blog" class="btn btn-primary">Explore Our Tours</a>
+      </div>
     </div>
 
-    <div class="featured-destinations py-5 bg-light"> 
-        <div class="container">
-            <h2>Featured Destinations</h2>
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col">
-                    <div class="card h-100 destination-card">
-                        <img src="static\images\elima castle.jpg" class="card-img-top" alt="Cape Coast Castle">
-                        <div class="card-body">
-                            <h3 class="card-title">Cape Coast Castle</h3>
-                            <p class="card-text">Explore the historical significance of this UNESCO World Heritage site.</p>
-                            <a href="#" class="btn btn-sm btn-outline-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100 destination-card">
-                        <img src="static\images\kakum national park.jpg" class="card-img-top" alt="Kakum National Park">
-                        <div class="card-body">
-                            <h3 class="card-title">Kakum National Park</h3>
-                            <p class="card-text">Walk among the treetops on the famous canopy walkway.</p>
-                            <a href="#" class="btn btn-sm btn-outline-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100 destination-card">
-                        <img src="static\images\memoria.jpg" class="card-img-top" alt="Lake Volta">
-                        <div class="card-body">
-                            <h3 class="card-title">muslem</h3>
-                            <p class="card-text">Enjoy the serene beauty and explore the islands of the world's largest artificial lake.</p>
-                            <a href="#" class="btn btn-sm btn-outline-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
+    <div class="featured-destinations py-5 bg-light">
+      <div class="container">
+        <!-- <h2>Featured Destinations</h2> -->
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100 destination-card">
+              <img src="{{ url_for('static', filename='images/elima castle.jpg') }}" class="card-img-top" alt="Cape Coast Castle">
+              <div class="card-body">
+                <h3 class="card-title">Cape Coast Castle</h3>
+                <p class="card-text">Explore the historical significance of this UNESCO World Heritage site.</p>
+                <a href="#" class="btn btn-sm btn-outline-primary">Learn More</a>
+              </div>
             </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 destination-card">
+              <img src="{{ url_for('static', filename='images/kakum national park.jpg') }}" class="card-img-top" alt="Kakum National Park">
+              <div class="card-body">
+                <h3 class="card-title">Kakum National Park</h3>
+                <p class="card-text">Walk among the treetops on the famous canopy walkway.</p>
+                <a href="#" class="btn btn-sm btn-outline-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 destination-card">
+              <img src="{{ url_for('static', filename='images/memoria.jpg') }}" class="card-img-top" alt="Lake Volta">
+              <div class="card-body">
+                <h3 class="card-title">muslem</h3>
+                <p class="card-text">Enjoy the serene beauty and explore the islands of the world's largest artificial lake.</p>
+                <a href="#" class="btn btn-sm btn-outline-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <div class="cta py-5">
-        <div class="container">
-            <h2>Ready to Plan Your Ghanaian Adventure?</h2>
-            <p>Discover unforgettable experiences and create lasting memories.</p>
-            <a href="/contact" class="btn btn-light btn-lg">Contact Us Today</a>
-        </div>
+      <div class="container">
+        <h2>Ready to Plan Your Ghanaian Adventure?</h2>
+        <p>Discover unforgettable experiences and create lasting memories.</p>
+        <a href="/contact" class="btn btn-light btn-lg">Contact Us Today</a>
+      </div>
     </div>
     <footer>
-        <div id="footer">
-            <div class="container">
-                <div class="row row-bottom-padded-md">
-                    <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
-                        <h3>About Travel</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    </div>
-                    <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
-                        <h3>Top Flights Routes</h3>
-                        <ul>
-                            <li><a href="#">Manila flights</a></li>
-                            <li><a href="#">Dubai flights</a></li>
-                            <li><a href="#">Bangkok flights</a></li>
-                            <li><a href="#">Tokyo Flight</a></li>
-                            <li><a href="#">New York Flights</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
-                        <h3>Top Hotels</h3>
-                        <ul>
-                            <li><a href="#">Boracay Hotel</a></li>
-                            <li><a href="#">Dubai Hotel</a></li>
-                            <li><a href="#">Singapore Hotel</a></li>
-                            <li><a href="#">Manila Hotel</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
-                        <h3>Interest</h3>
-                        <ul>
-                            <li><a href="#">Beaches</a></li>
-                            <li><a href="#">Family Travel</a></li>
-                            <li><a href="#">Budget Travel</a></li>
-                            <li><a href="#">Food &amp; Drink</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
-                        <h3>Best Places</h3>
-                        <ul>
-                            <li><a href="#">Boracay Beach</a></li>
-                            <li><a href="#">Dubai</a></li>
-                            <li><a href="#">Singapore</a></li>
-                            <li><a href="#">Hongkong</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
-                        <h3>Affordable</h3>
-                        <ul>
-                            <li><a href="#">Food &amp; Drink</a></li>
-                            <li><a href="#">Fare Flights</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3 text-center">
-                        <p class="fh5co-social-icons">
-                            <a href="#"><i class="icon-twitter2"></i></a>
-                            <a href="#"><i class="icon-facebook2"></i></a>
-                            <a href="#"><i class="icon-instagram"></i></a>
-                            <a href="#"><i class="icon-dribbble2"></i></a>
-                            <a href="#"><i class="icon-youtube"></i></a>
-                        </p>
-                     </div>
-                </div>
+      <div id="footer">
+        <div class="container">
+          <div class="row row-bottom-padded-md">
+            <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
+              <h3>About Travel</h3>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
             </div>
+            <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
+              <h3>Top Flights Routes</h3>
+              <ul>
+                <li><a href="#">Manila flights</a></li>
+                <li><a href="#">Dubai flights</a></li>
+                <li><a href="#">Bangkok flights</a></li>
+                <li><a href="#">Tokyo Flight</a></li>
+                <li><a href="#">New York Flights</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
+              <h3>Top Hotels</h3>
+              <ul>
+                <li><a href="#">Boracay Hotel</a></li>
+                <li><a href="#">Dubai Hotel</a></li>
+                <li><a href="#">Singapore Hotel</a></li>
+                <li><a href="#">Manila Hotel</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
+              <h3>Interest</h3>
+              <ul>
+                <li><a href="#">Beaches</a></li>
+                <li><a href="#">Family Travel</a></li>
+                <li><a href="#">Budget Travel</a></li>
+                <li><a href="#">Food &amp; Drink</a></li>
+                <li><a href="#">Honeymoon and Romance</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
+              <h3>Best Places</h3>
+              <ul>
+                <li><a href="#">Boracay Beach</a></li>
+                <li><a href="#">Dubai</a></li>
+                <li><a href="#">Singapore</a></li>
+                <li><a href="#">Hongkong</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
+              <h3>Affordable</h3>
+              <ul>
+                <li><a href="#">Food &amp; Drink</a></li>
+                <li><a href="#">Fare Flights</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center">
+              <p class="fh5co-social-icons">
+                <a href="#"><i class="icon-twitter2"></i></a>
+                <a href="#"><i class="icon-facebook2"></i></a>
+                <a href="#"><i class="icon-instagram"></i></a>
+                <a href="#"><i class="icon-dribbble2"></i></a>
+                <a href="#"><i class="icon-youtube"></i></a>
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -185,5 +198,20 @@
       crossorigin="anonymous"
     ></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{url_for('static', filename='js/jquery.easing.1.3.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/jquery.waypoints.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/sticky.js')}}"></script>
+
+    <script src="{{url_for('static', filename='js/jquery.stellar.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/hoverIntent.js')}}"></script>
+    <script src="{{url_for('static', filename='js/superfish.js')}}"></script>
+    <script src="{{url_for('static', filename='js/jquery.magnific-popup.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/magnific-popup-options.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-datepicker.min.js') }}"></script>
+    <script src="{{url_for('static', filename='js/classie.js')}}"></script>
+    <script src="{{url_for('static', filename='js/selectFx.js')}}"></script>
+
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
   </body>
 </html>

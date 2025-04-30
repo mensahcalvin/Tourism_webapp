@@ -17,6 +17,7 @@ def vacation():
 @app.route('/flight')
 def flight():
     return render_template('flight.html')
+
 @app.route('/hotel')
 def hotel():
     return render_template('hotel.html')
@@ -29,7 +30,7 @@ def contact():
 def Tourism():
     return render_template('Tourism.html')
 
-@app.route('/blog/category2')
+@app.route('/blog/category1')
 def category1():
     return render_template('category1.html')
 

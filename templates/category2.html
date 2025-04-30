@@ -1,17 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>home-page</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>home-page</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="shortcut icon" href="favicon.ico">
+    
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+        
+        <!-- Animate.css -->
+        <link rel="stylesheet" href="{{url_for('static', filename='css/animate.css')}}">
+        <!-- Icomoon Icon Fonts-->
+        <link rel="stylesheet" href="{{url_for('static', filename='css/icomoon.css')}}">
+        <!-- Bootstrap  -->
+        <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.css')}}">
+        <!-- Superfish -->
+        <link rel="stylesheet" href="{{url_for('static', filename='css/superfish.css')}}">
+        <!-- Magnific Popup -->
+        <link rel="stylesheet" href="{{url_for('static',filename='css/Popup.css)}}">
+        <!-- Date Picker -->
+        <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
+		<!-- CS Select -->
+		<link rel="stylesheet" href="{{url_for('static', filename='css/cs-select.css')}}">
+		<link rel="stylesheet" href="{{url_for('static', filename='css/cs-skin-border.css')}}">
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous"
+        />
+      </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
@@ -126,10 +146,34 @@
         </div>
     </footer>
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  <!-- jQuery Easing -->
+  <script src="{{url_for('static', filename='js/jquery.easing.1.3.js')}}"></script>
+  <!-- Bootstrap -->
+  <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+  <!-- Waypoints -->
+  <script src="{{url_for('static', filename='js/jquery.waypoints.min.js')}}"></script>
+  <script src="{{url_for('static', filename='js/sticky.js')}}"></script>
+
+  <!-- Stellar -->
+  <script src="{{url_for('static', filename='js/jquery.stellar.min.js')}}"></script>
+  <!-- Superfish -->
+  <script src="{{url_for('static', filename='js/hoverIntent.js')}}"></script>
+  <script src="{{url_for('static', filename='js/superfish.js')}}"></script>
+  <!-- Magnific Popup -->
+  <script src="{{url_for('static', filename='js/jquery.magnific-popup.min.js')}}"></script>
+  <script src="{{url_for('static', filename='js/magnific-popup-options.js')}}"></script>
+  <!-- Date Picker -->
+  <script src="{{url_for('static', filename='js/bootstrap-datepicker.min.js')}}"></script>
+  <!-- CS Select -->
+  <script src="{{url_for('static', filename='js/classie.js')}}"></script>
+  <script src="{{url_for('static', filename='js/selectFx.js')}}"></script>
+  
+  <!-- Main JS -->
+  <script src="{{url_for('static', filename='js/main.js')}}"></script>
   </body>
 </html>
