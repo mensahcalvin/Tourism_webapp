@@ -42,9 +42,9 @@ def familytravel():
 def budget():
     return render_template('budget.html')
 
-@app.route("\vacation/food")
+@app.route("/vacation/food")
 def food():
-     return render_template('food.html')
+    return render_template('food.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
