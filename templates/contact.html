@@ -1,61 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>home-page</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="shortcut icon" href="favicon.ico">
-    
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
-        
-        <!-- Animate.css -->
-        <link rel="stylesheet" href="{{url_for('static', filename='css/animate.css')}}">
-        <!-- Icomoon Icon Fonts-->
-        <link rel="stylesheet" href="{{url_for('static', filename='css/icomoon.css')}}">
-        <!-- Bootstrap  -->
-        <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.css')}}">
-        <!-- Superfish -->
-        <link rel="stylesheet" href="{{url_for('static', filename='css/superfish.css')}}">
-        <!-- Magnific Popup -->
-        <link rel="stylesheet" href="{{url_for('static',filename='css/Popup.css)}}">
-        <!-- Date Picker -->
-        <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
-        		<!-- CS Select -->
-		<link rel="stylesheet" href="{{url_for('static', filename='css/cs-select.css')}}">
-		<link rel="stylesheet" href="{{url_for('static', filename='css/cs-skin-border.css')}}">
-        <link
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-          crossorigin="anonymous"
-        />
-      </head>
-  <body>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,300" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/animate.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/icomoon.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/superfish.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static',filename='css/Popup.css')}}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-datepicker.min.css') }}" />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/cs-select.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/cs-skin-border.css')}}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
+</head>
+
+<body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">My Website</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        <a class="nav-link" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/blog">blog</a>
                     </li>
-                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             vacation
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/blog">Blog Home</a></li>
-                            <li><a class="dropdown-item" href="/blog/category1">Category 1</a></li>
-                            <li><a class="dropdown-item" href="/blog/category2">Category 2</a></li>
-                            <li><a class="dropdown-item" href="/blog/category23">Category 2</a></li>
+                            <li><a class="dropdown-item" href="/vacation">vacation Home</a></li>
+                            <li><a class="dropdown-item" href="/vacation/beach">beach</a></li>
+                            <li><a class="dropdown-item" href="/vacation/familytravel">family_travel</a></li>
+                            <li><a class="dropdown-item" href="/vacation/food">food&drink</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -65,48 +58,470 @@
                         <a class="nav-link" href="/hotel">hotel</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/contact">contact</a>
+                        <a class="nav-link active" href="/contact">contact</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/Tourism">Tourism</a>
                     </li>
                 </ul>
                 <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                  </form>
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">
+                        Search
+                    </button>
+                </form>
             </div>
         </div>
     </nav>
-    <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"
-  ></script>
-  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-  <!-- jQuery Easing -->
-  <script src="{{url_for('static', filename='js/jquery.easing.1.3.js')}}"></script>
-  <!-- Bootstrap -->
-  <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
-  <!-- Waypoints -->
-  <script src="{{url_for('static', filename='js/jquery.waypoints.min.js')}}"></script>
-  <script src="{{url_for('static', filename='js/sticky.js')}}"></script>
+    <div class="fh5co-hero">
+        <div class="fh5co-overlay"></div>
+        <div class="fh5co-cover" data-stellar-background-ratio="0.5">
+            <div class="desc" style="margin-left: 20px; display: flex; flex-direction: column;">
+                    <div class="row">
+                        <div class="col-sm-8 col-md-5" style="display: flex;  align-items: center; width: 80%;">
+                            <div class="tabulation animate-box">
 
-  <!-- Stellar -->
-  <script src="{{url_for('static', filename='js/jquery.stellar.min.js')}}"></script>
-  <!-- Superfish -->
-  <script src="{{url_for('static', filename='js/hoverIntent.js')}}"></script>
-  <script src="{{url_for('static', filename='js/superfish.js')}}"></script>
-  <!-- Magnific Popup -->
-  <script src="{{url_for('static', filename='js/jquery.magnific-popup.min.js')}}"></script>
-  <script src="{{url_for('static', filename='js/magnific-popup-options.js')}}"></script>
-  <!-- Date Picker -->
-  <script src="{{url_for('static', filename='js/bootstrap-datepicker.min.js')}}"></script>
-  <!-- CS Select -->
-  <script src="{{url_for('static', filename='js/classie.js')}}"></script>
-  <script src="{{url_for('static', filename='js/selectFx.js')}}"></script>
-  
-  <!-- Main JS -->
-  <script src="{{url_for('static', filename='js/main.js')}}"></script>
-  </body>
+                              <!-- Nav tabs -->
+                               <ul class="nav nav-tabs" role="tablist">
+                                  <li role="presentation">
+                                      <a href="#flights" aria-controls="flights" role="tab" data-toggle="tab">Flights</a>
+                                  </li>
+                                  <li role="presentation">
+                                       <a href="#hotels" aria-controls="hotels" role="tab" data-toggle="tab">Hotels</a>
+                                  </li>
+                                  <li role="presentation"  class="active">
+                                       <a href="#packages" aria-controls="packages" role="tab" data-toggle="tab">Packages</a>
+                                  </li>
+                               </ul>
+
+                               <!-- Tab panes -->
+                                <div class="tab-content">
+                                 <div role="tabpanel" class="tab-pane" id="flights">
+                                    <div class="row">
+                                        <div class="col-xxs-12 col-xs-6 mt">
+                                            <div class="input-field">
+                                                <label for="from">From:</label>
+                                                <input type="text" class="form-control" id="from-place" placeholder="Los Angeles, USA"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-xxs-12 col-xs-6 mt">
+                                            <div class="input-field">
+                                                <label for="from">To:</label>
+                                                <input type="text" class="form-control" id="to-place" placeholder="Tokyo, Japan"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-xxs-12 col-xs-6 mt alternate">
+                                            <div class="input-field">
+                                                <label for="date-start">Check In:</label>
+                                                <input type="text" class="form-control" id="date-start" placeholder="mm/dd/yyyy"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-xxs-12 col-xs-6 mt alternate">
+                                            <div class="input-field">
+                                                <label for="date-end">Check Out:</label>
+                                                <input type="text" class="form-control" id="date-end" placeholder="mm/dd/yyyy"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 mt">
+                                            <section>
+                                                <label for="class">Class:</label>
+                                                <select class="cs-select cs-skin-border">
+                                                    <option value="" disabled selected>Economy</option>
+                                                    <option value="economy">Economy</option>
+                                                    <option value="first">First</option>
+                                                    <option value="business">Business</option>
+                                                </select>
+                                            </section>
+                                        </div>
+                                        <div class="col-xxs-12 col-xs-6 mt">
+                                            <section>
+                                                <label for="class">Adult:</label>
+                                                <select class="cs-select cs-skin-border">
+                                                    <option value="" disabled selected>1</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                </select>
+                                            </section>
+                                        </div>
+                                        <div class="col-xxs-12 col-xs-6 mt">
+                                            <section>
+                                                <label for="class">Children:</label>
+                                                <select class="cs-select cs-skin-border">
+                                                    <option value="" disabled selected>1</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                </select>
+                                            </section>
+                                        </div>
+                                        <div class="col-xs-12">
+                                            <input type="submit" class="btn btn-primary btn-block" value="Search Flight">
+                                        </div>
+                                    </div>
+                                 </div>
+
+                                 <div role="tabpanel" class="tab-pane active" id="hotels">
+                                     <div class="row">
+                                        <div class="col-xxs-12 col-xs-12 mt">
+                                            <div class="input-field">
+                                                <label for="from">City:</label>
+                                                <input type="text" class="form-control" id="from-place" placeholder="Los Angeles, USA"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-xxs-12 col-xs-6 mt alternate">
+                                            <div class="input-field">
+                                                <label for="date-start">Return:</label>
+                                                <input type="text" class="form-control" id="date-start" placeholder="mm/dd/yyyy"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-xxs-12 col-xs-6 mt alternate">
+                                            <div class="input-field">
+                                                <label for="date-end">Check Out:</label>
+                                                <input type="text" class="form-control" id="date-end" placeholder="mm/dd/yyyy"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 mt">
+                                            <section>
+                                                <label for="class">Rooms:</label>
+                                                <select class="cs-select cs-skin-border">
+                                                    <option value="" disabled selected>1</option>
+                                                    <option value="economy">1</option>
+                                                    <option value="first">2</option>
+                                                    <option value="business">3</option>
+                                                </select>
+                                            </section>
+                                        </div>
+                                        <div class="col-xxs-12 col-xs-6 mt">
+                                            <section>
+                                                <label for="class">Adult:</label>
+                                                <select class="cs-select cs-skin-border">
+                                                    <option value="" disabled selected>1</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                </select>
+                                            </section>
+                                        </div>
+                                        <div class="col-xxs-12 col-xs-6 mt">
+                                            <section>
+                                                <label for="class">Children:</label>
+                                                <select class="cs-select cs-skin-border">
+                                                    <option value="" disabled selected>1</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                </select>
+                                            </section>
+                                        </div>
+                                        <div class="col-xs-12">
+                                            <input type="submit" class="btn btn-primary btn-block" value="Search Hotel">
+                                        </div>
+                                    </div>
+                                 </div>
+
+                                 <div role="tabpanel" class="tab-pane" id="packages">
+                                     <div class="row">
+                                        <div class="col-xxs-12 col-xs-6 mt">
+                                            <div class="input-field">
+                                                <label for="from">City:</label>
+                                                <input type="text" class="form-control" id="from-place" placeholder="Los Angeles, USA"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-xxs-12 col-xs-6 mt">
+                                            <div class="input-field">
+                                                <label for="from">Destination:</label>
+                                                <input type="text" class="form-control" id="to-place" placeholder="Tokyo, Japan"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-xxs-12 col-xs-6 mt alternate">
+                                            <div class="input-field">
+                                                <label for="date-start">Departs:</label>
+                                                <input type="text" class="form-control" id="date-start" placeholder="mm/dd/yyyy"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-xxs-12 col-xs-6 mt alternate">
+                                            <div class="input-field">
+                                                <label for="date-end">Return:</label>
+                                                <input type="text" class="form-control" id="date-end" placeholder="mm/dd/yyyy"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 mt">
+                                            <section>
+                                                <label for="class">Rooms:</label>
+                                                <select class="cs-select cs-skin-border">
+                                                    <option value="" disabled selected>1</option>
+                                                    <option value="economy">1</option>
+                                                    <option value="first">2</option>
+                                                    <option value="business">3</option>
+                                                </select>
+                                            </section>
+                                        </div>
+                                        <div class="col-xxs-12 col-xs-6 mt">
+                                            <section>
+                                                <label for="class">Adult:</label>
+                                                <select class="cs-select cs-skin-border">
+                                                    <option value="" disabled selected>1</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                </select>
+                                            </section>
+                                        </div>
+                                        <div class="col-xxs-12 col-xs-6 mt">
+                                            <section>
+                                                <label for="class">Children:</label>
+                                                <select class="cs-select cs-skin-border">
+                                                    <option value="" disabled selected>1</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                </select>
+                                            </section>
+                                        </div>
+                                        <div class="col-xs-12">
+                                            <input type="submit" class="btn btn-primary btn-block" value="Search Packages">
+                                        </div>
+                                    </div>
+                                 </div>
+                                </div>
+
+                            </div>
+                            <div class="desc2 animate-box">
+                                <div class="col-sm-7 col-sm-push-1 col-md-7 col-md-push-1" style="width: 60%;">
+                                    <p style=" width: 80vh; font-weight: 400; font-weight: 300;">HandCrafted by IT INNOVATORS</a></p>
+                                    <h2 style="width: 90vh;">Exclusive Limited Time Offer</h2>
+                                    <h3 style="width: 90vh;">Fly to Hong Kong via Los Angeles, USA</h3>
+                                    <span class="price">$599</span>
+                                    <!-- <p><a class="btn btn-primary btn-lg" href="#">Get Started</a></p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <div id="fh5co-testimonial">
+        <div class="row animate-box">
+            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading" style="margin-bottom: 10px;">
+                <h2>Happy Clients</h2>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="box-testimony animate-box">
+                        <blockquote>
+                            <span class="quote"><span><i class="icon-quotes-right"></i></span></span>
+                            <p>
+                                &ldquo;Far far away, behind the word mountains, far from the
+                                countries Vokalia and Consonantia, there live the blind texts.
+                                Separated they live in Bookmarksgrove right at the coast of
+                                the Semantics, a large language ocean.&rdquo;
+                            </p>
+                        </blockquote>
+                        <p class="author">
+                            Ebenezer, CEO <span class="subtext">Creative Director</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box-testimony animate-box">
+                        <blockquote>
+                            <span class="quote"><span><i class="icon-quotes-right"></i></span></span>
+                            <p>
+                                &ldquo;Far far away, behind the word mountains, far from the
+                                countries Vokalia and Consonantia, there live the blind
+                                texts.&rdquo;
+                            </p>
+                        </blockquote>
+                        <p class="author">
+                            Isaac, CEO <span class="subtext">Creative Director</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box-testimony animate-box">
+                        <blockquote>
+                            <span class="quote"><span><i class="icon-quotes-right"></i></span></span>
+                            <p>
+                                &ldquo;Far far away, behind the word mountains, far from the
+                                countries Vokalia and Consonantia, there live the blind texts.
+                                Separated they live in Bookmarksgrove right at the coast of
+                                the Semantics, a large language ocean.&rdquo;
+                            </p>
+                        </blockquote>
+                        <p class="author">
+                            Alexendra, Founder
+                            <span class="subtext">Creative Director</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="fh5co-contact" class="fh5co-section-gray" style="display: flex; flex-direction: column;">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+                <h3>Contact Information</h3>
+                <p>
+                    Far far away, behind the word mountains, far from the countries
+                    Vokalia and Consonantia, there live the blind texts.
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <form action="#">
+                <div class="row animate-box">
+                    <div class="col-md-6">
+                        <h3 class="section-title">Our Address</h3>
+                        <p>
+                            Far far away, behind the word mountains, far from the countries
+                            Vokalia and Consonantia, there live the blind texts.
+                        </p>
+                        <ul class="contact-info">
+                            <li><i class="icon-location-pin"></i>Madina</li>
+                            <li><i class="icon-phone2"></i>+233 532785843</li>
+                            <li>
+                                <i class="icon-mail"></i><a href="#">mawuenaexahkumordzi@gmail.com</a>
+                            </li>
+                            <li>
+                                <i class="icon-globe2"></i><a href="#">www.yoursite.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <form action="https://api.web3forms.com/submit" method="POST">
+                                <div class="col-md-6">
+                                    <input type="hidden" name="access_key"
+                                        value="5f8ee829-c075-4181-8c68-10b40968743f" />
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Name" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Email" />
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <textarea name="" class="form-control" id="" cols="30" rows="7"
+                                            placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="submit" value="Send Message" class="btn btn-primary" />
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div id="footer">
+            <div class="container">
+                <div class="row row-bottom-padded-md">
+                    <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
+                        <h3>About Travel</h3>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
+                        <h3>Top Flights Routes</h3>
+                        <ul>
+                            <li><a href="#">Manila flights</a></li>
+                            <li><a href="#">Dubai flights</a></li>
+                            <li><a href="#">Bangkok flights</a></li>
+                            <li><a href="#">Tokyo Flight</a></li>
+                            <li><a href="#">New York Flights</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
+                        <h3>Top Hotels</h3>
+                        <ul>
+                            <li><a href="#">Boracay Hotel</a></li>
+                            <li><a href="#">Dubai Hotel</a></li>
+                            <li><a href="#">Singapore Hotel</a></li>
+                            <li><a href="#">Manila Hotel</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
+                        <h3>Interest</h3>
+                        <ul>
+                            <li><a href="beaches.html">Beaches</a></li>
+                            <li><a href="family_travel.html">Family Travel</a></li>
+                            <li><a href="#">Budget Travel</a></li>
+                            <li><a href="food&drink.html">Food &amp; Drink</a></li>
+                            <li><a href="#">Honeymoon and Romance</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
+                        <h3>Best Places</h3>
+                        <ul>
+                            <li><a href="#">Boracay Beach</a></li>
+                            <li><a href="#">Dubai</a></li>
+                            <li><a href="#">Singapore</a></li>
+                            <li><a href="#">Hongkong</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
+                        <h3>Affordable</h3>
+                        <ul>
+                            <li><a href="#">Food &amp; Drink</a></li>
+                            <li><a href="#">Fare Flights</a></li>
+                        </ul>
+                    </div>
+                </div>
+           
+            </div>
+         
+        </div>
+        <!-- <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center">
+                <p class="fh5co-social-icons">
+                    <a href="#"><i class="icon-twitter2"></i></a>
+                    <a href="#"><i class="icon-facebook2"></i></a>
+                    <a href="#"><i class="icon-instagram"></i></a>
+                    <a href="#"><i class="icon-dribbble2"></i></a>
+                    <a href="#"><i class="icon-youtube"></i></a>
+                </p>
+                <p>Copyright 2016 Free Html5 <a href="#">Module</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="http://freehtml5.co/" target="_blank">Freehtml5.co</a> / Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash</a></p>
+            </div>
+        </div> -->
+    </footer>
+    <div id="map" class="fh5co-map"></div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{url_for('static', filename='js/jquery.easing.1.3.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/jquery.waypoints.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/sticky.js')}}"></script>
+
+    <script src="{{url_for('static', filename='js/jquery.stellar.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/hoverIntent.js')}}"></script>
+    <script src="{{url_for('static', filename='js/superfish.js')}}"></script>
+    <script src="{{url_for('static', filename='js/jquery.magnific-popup.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/magnific-popup-options.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-datepicker.min.js') }}"></script>
+    <script src="{{url_for('static', filename='js/classie.js')}}"></script>
+    <script src="{{url_for('static', filename='js/selectFx.js')}}"></script>
+
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>

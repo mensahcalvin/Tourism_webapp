@@ -30,17 +30,21 @@ def contact():
 def Tourism():
     return render_template('Tourism.html')
 
-@app.route('/blog/category1')
-def category1():
-    return render_template('category1.html')
+@app.route('/vacation/Beach')
+def Beach():
+    return render_template('Beach.html')
 
-@app.route('/blog/category2')
-def category2():
-    return render_template('category2.html')
+@app.route('/vacation/familytravel')
+def familytravel():
+    return render_template('familytravel.html')
 
-@app.route('/blog/category3')
-def category3():
-    return render_template('category3.html')
+@app.route('/vacation/budget')
+def budget():
+    return render_template('budget.html')
+
+@app.route("\vacation/food")
+def food():
+     return render_template('food.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
