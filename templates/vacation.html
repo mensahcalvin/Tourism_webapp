@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>home-page</title>
+        <title>vacationpage</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="shortcut icon" href="{{url_for('static', filename='favicon.ico')}}">
     
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
         
@@ -19,9 +19,9 @@
         <!-- Superfish -->
         <link rel="stylesheet" href="{{url_for('static', filename='css/superfish.css')}}">
         <!-- Magnific Popup -->
-        <link rel="stylesheet" href="{{url_for('static',filename='css/Popup.css)}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/Popup.css')}}">
         <!-- Date Picker -->
-        <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap-datepicker.min.css')}}">
         		<!-- CS Select -->
 		<link rel="stylesheet" href="{{url_for('static', filename='css/cs-select.css')}}">
 		<link rel="stylesheet" href="{{url_for('static', filename='css/cs-skin-border.css')}}">
@@ -42,7 +42,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        <a class="nav-link" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/blog">blog</a>
@@ -51,7 +51,7 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             vacation
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <ul class="dropdown-menu active" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="/vacation">vacation Home</a></li>
                             <li><a class="dropdown-item" href="/vacation/beach">beach</a></li>
                             <li><a class="dropdown-item" href="/vacation/familytravel">family_travel</a></li>
@@ -80,27 +80,28 @@
     </nav>
     <div class="fh5co-hero">
         <div class="fh5co-overlay"></div>
-        <div class="fh5co-cover" data-stellar-background-ratio="0.5" style="background-image: url(images/cover_bg_2.jpg);">
-            <div class="desc">
-                <div class="container">
-                    <div class="row d-flex col-md-2">
-                        <div class="col-sm-5 col-md-5">
-                            <!-- <a href="index.html" id="main-logo">Travel</a> -->
+        <div class="fh5co-cover" data-stellar-background-ratio="0.5">
+            <div class="desc" style="margin-left: 20px; display: flex; flex-direction: column;">
+                    <div class="row">
+                        <div class="col-sm-8 col-md-5" style="display: flex;  align-items: center; width: 80%;">
                             <div class="tabulation animate-box">
-
+    
                               <!-- Nav tabs -->
                                <ul class="nav nav-tabs" role="tablist">
-                                  <li role="presentation" class="active">
-                                      <a href="\flights.html" aria-controls="flights" role="tab" data-toggle="tab">Flights</a>
+                                  <li role="presentation">
+                                      <a href="#flights" aria-controls="flights" role="tab" data-toggle="tab">Flights</a>
                                   </li>
                                   <li role="presentation">
-                                       <a href="\\hotel.html" aria-controls="hotels" role="tab" data-toggle="tab">Hotels</a>
+                                       <a href="#hotels" aria-controls="hotels" role="tab" data-toggle="tab">Hotels</a>
+                                  </li>
+                                  <li role="presentation" class="active">
+                                       <a href="#packages" aria-controls="packages" role="tab" data-toggle="tab">Packages</a>
                                   </li>
                                </ul>
-
+    
                                <!-- Tab panes -->
                                 <div class="tab-content">
-                                 <div role="tabpanel" class="tab-pane active" id="flights">
+                                 <div role="tabpanel" class="tab-pane" id="flights">
                                     <div class="row">
                                         <div class="col-xxs-12 col-xs-6 mt">
                                             <div class="input-field">
@@ -166,8 +167,8 @@
                                         </div>
                                     </div>
                                  </div>
-
-                                 <div role="tabpanel" class="tab-pane" id="hotels">
+    
+                                 <div role="tabpanel" class="tab-pane active" id="hotels">
                                      <div class="row">
                                         <div class="col-xxs-12 col-xs-12 mt">
                                             <div class="input-field">
@@ -227,7 +228,7 @@
                                         </div>
                                     </div>
                                  </div>
-
+    
                                  <div role="tabpanel" class="tab-pane" id="packages">
                                      <div class="row">
                                         <div class="col-xxs-12 col-xs-6 mt">
@@ -295,138 +296,138 @@
                                     </div>
                                  </div>
                                 </div>
-
+    
                             </div>
-                        </div>
-                        <div class="desc2 animate-box">
-                            <div class="col-sm-7 col-sm-push-1 col-md-7 col-md-push-1">
-                                <p>HandCrafted by IT INNOVATORS</p>
-                                <h2>Exclusive Limited Time Offer</h2>
-                                <h3>Fly to HO via flight from Accrs</h3>
-                                <span class="price">$300</span>
-                                <!-- <p><a class="btn btn-primary btn-lg" href="#">Get Started</a></p> -->
+                            <div class="desc2 animate-box">
+                                <div class="col-sm-7 col-sm-push-1 col-md-7 col-md-push-1" style="width: 60%;">
+                                    <p style="width: 80vh; font-weight: 400;">HandCrafted by IT INNOVATORS</p>
+                                    <h2 style="width: 90vh;">Exclusive Limited Time Offer</h2>
+                                    <h3 style="width: 90vh;">Fly to Hong Kong via Los Angeles, USA</h3>
+                                    <span class="price">$599</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
-
+    
     </div>
     
 
     <div id="fh5co-tours" class="fh5co-section-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
-                    <h3>Tourist Spots</h3>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+                <h3>Tourist Spots</h3>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
             </div>
+        </div>
+        <div class="container">
+          
             <div class="row">
                 <div class="col-md-4 col-sm-4 fh5co-tours animate-box" data-animate-effect="fadeIn">
-                    <div href="#"><img src="images/keta-ressort.jpg" alt="#" class="img-responsive" style="width: 100%; height: 50vh;">
+                    <a href="#"><img src="{{url_for('static', filename='images/keta-ressort.jpg')}}" alt="#" class="img-responsive" style="width: 100%; height: 50vh;">
                         <div class="desc">
                             <span></span>
                             <h3>keta</h3>
                             <span>3 nights + Flight 5*Hotel</span>
                             <span class="price">$400</span>
-                            <a class="btn btn-primary btn-outline" href="flight.html">Book Now <i class="icon-arrow-right22"></i></a>
+                            <a class="btn btn-primary btn-outline" href="/flight">Book Now <i class="icon-arrow-right22"></i></a>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-md-4 fh5co-tours animate-box" data-animate-effect="fadeIn">
-                    <div href="#"><img src="images/forest.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive" style="width: 100%; height: 50vh;">
+                    <a href="#"><img src="{{url_for('static', filename='images/forest.jpg')}}" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive" style="width: 100%; height: 50vh;">
                         <div class="desc">
                             <span></span>
                             <h3>forest resort</h3>
                             <span class="price">$30</span>
-                            <a class="btn btn-primary btn-outline" href="#">Book Now <i class="icon-arrow-right22"></i></a>
+                            <a class="btn btn-primary btn-outline" href="/flight">Book Now <i class="icon-arrow-right22"></i></a>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-md-4 col-sm-6 fh5co-tours animate-box" data-animate-effect="fadeIn">
-                    <div href="#"><img src="images/mole-national-park.jpg" alt="#" class="img-responsive" style="width: 100%; height: 50vh;">
+                    <a href="#"><img src="{{url_for('static', filename='images/mole-national-park.jpg')}}" alt="#" class="img-responsive" style="width: 100%; height: 50vh;">
                         <div class="desc">
                             <span></span>
                             <h3>mole national park</h3>
                             <span>1 nights + 2*Hotel</span>
                             <span class="price">$ 700</span>
-                            <a class="btn btn-primary btn-outline" href="flight.html">Book Now <i class="icon-arrow-right22"></i></a>
+                            <a class="btn btn-primary btn-outline" href="/flight">Book Now <i class="icon-arrow-right22"></i></a>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-md-4 col-sm-6 fh5co-tours animate-box" data-animate-effect="fadeIn">
-                    <div href="#"><img src="images/Aburi-garden.jpg" alt="eeHTML5.co" class="img-responsive" style="width: 100%; height: 50vh;">
+                    <a href="#"><img src="{{url_for('static', filename='images/Aburi-garden.jpg')}}" alt="eeHTML5.co" class="img-responsive" style="width: 100%; height: 50vh;">
                         <div class="desc">
                             <span></span>
                             <span>3 nights + Flight 5*Hotel</span>
                             <span class="price">$1,000</span>
-                            <a class="btn btn-primary btn-outline" href="#">Book Now <i class="icon-arrow-right22"></i></a>
+                            <a class="btn btn-primary btn-outline" href="/flight">Book Now <i class="icon-arrow-right22"></i></a>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-md-4 col-sm-6 fh5co-tours animate-box" data-animate-effect="fadeIn">
-                    <div href="#"><img src="images/elima castle.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive" style="width: 100%; height: 50vh;">
+                    <a href="#"><img src="{{url_for('static', filename='images/elima castle.jpg')}}" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive" style="width: 100%; height: 50vh;">
                         <div class="desc">
                             <span></span>
                             <span>4 nights + Flight 5*Hotel</span>
                             <span class="price">$1,000</span>
-                            <a class="btn btn-primary btn-outline" href="#">Book Now <i class="icon-arrow-right22"></i></a>
+                            <a class="btn btn-primary btn-outline" href="/flight">Book Now <i class="icon-arrow-right22"></i></a>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-md-4 col-sm-6 fh5co-tours animate-box" data-animate-effect="fadeIn">
-                    <div href="#"><img src="images/mosic maoque.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive" style="width: 100%; height: 50vh;">
+                    <a href="#"><img src="{{url_for('static', filename='images/mosic maoque.jpg')}}" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive" style="width: 100%; height: 50vh;">
                         <div class="desc">
                             <span></span>
                             <span>2 nights + Flight 4*Hotel</span>
                             <span class="price">$1,000</span>
-                            <a class="btn btn-primary btn-outline" href="#">Book Now <i class="icon-arrow-right22"></i></a>
+                            <a class="btn btn-primary btn-outline" href="/flight">Book Now <i class="icon-arrow-right22"></i></a>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-    <div id="fh5co-testimonial" style="background-image:url(images/img_bg_1.jpg);">
-    <div class="container">
-        <div class="row animate-box">
-            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-                <h2>Happy Clients</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="box-testimony animate-box">
-                    <blockquote>
-                        <span class="quote"><span><i class="icon-quotes-right"></i></span></span>
-                        <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-                    </blockquote>
-                    <p class="author">Ebenezer, CEO <span class="subtext">Creative Director</span></p>
+    <div id="fh5co-testimonial>
+        <div class="container">
+            <div class="row animate-box">
+                <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                    <h2>Happy Clients</h2>
                 </div>
-                
             </div>
-            <div class="col-md-4">
-                <div class="box-testimony animate-box">
-                    <blockquote>
-                        <span class="quote"><span><i class="icon-quotes-right"></i></span></span>
-                        <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.&rdquo;</p>
-                    </blockquote>
-                    <p class="author">calvin, CEO  <span class="subtext">Creative Director</span></p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="box-testimony animate-box">
+                        <blockquote>
+                            <span class="quote"><span><i class="icon-quotes-right"></i></span></span>
+                            <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
+                        </blockquote>
+                        <p class="author">Ebenezer, CEO <span class="subtext">Creative Director</span></p>
+                    </div>
+                    
                 </div>
-                
-                
-            </div>
-            <div class="col-md-4">
-                <div class="box-testimony animate-box">
-                    <blockquote>
-                        <span class="quote"><span><i class="icon-quotes-right"></i></span></span>
-                        <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-                    </blockquote>
-                    <p class="author">Emmanuel, Founder <span class="subtext">Creative Director</span></p>
+                <div class="col-md-4">
+                    <div class="box-testimony animate-box">
+                        <blockquote>
+                            <span class="quote"><span><i class="icon-quotes-right"></i></span></span>
+                            <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.&rdquo;</p>
+                        </blockquote>
+                        <p class="author">calvin, CEO  <span class="subtext">Creative Director</span></p>
+                    </div>
+                    
+                    
                 </div>
-                
+                <div class="col-md-4">
+                    <div class="box-testimony animate-box">
+                        <blockquote>
+                            <span class="quote"><span><i class="icon-quotes-right"></i></span></span>
+                            <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
+                        </blockquote>
+                        <p class="author">Emmanuel, Founder <span class="subtext">Creative Director</span></p>
+                    </div>
+                    
+                </div>
             </div>
         </div>
     </div>
